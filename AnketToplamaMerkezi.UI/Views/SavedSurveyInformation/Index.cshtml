@@ -1,0 +1,47 @@
+﻿@using AnketToplamaMerkezi.EntityLayer.Concrete.Model
+@model IEnumerable<SavedSurveyInformationModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                Anket Adı
+            </th>
+            <th>
+                Cevaplanma Tarihi
+            </th>
+            <th>İşlem</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SurveyName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SystemDate)
+                </td>
+                <td>
+                    @Html.ActionLink("Görüntüle", "OpenSurveyAnswers", new {  id = item.Id  }) |
+                    @Html.ActionLink("Güncelle", "EditSurveyAnswers", new {  id = item.Id  }) |
+                    @Html.ActionLink("Sil", "DeleteSurvey", new {  id = item.Id  }) |
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

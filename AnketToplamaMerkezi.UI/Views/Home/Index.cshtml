@@ -1,0 +1,38 @@
+﻿@using AnketToplamaMerkezi.EntityLayer.Concrete.Model
+@model IEnumerable<SurveyInformationModel>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<table class="table">
+    <thead style="">
+        <tr>
+            <th>
+                Anket Numarası
+            </th>
+            <th>
+                Anket Adı
+            </th>
+        </tr>
+    </thead>
+    
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SurveyName)
+                </td>
+                <td>
+                    @Html.ActionLink("Cevapla", "AnswerSurvey", new {  id = item.Id  }) |
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+@*<partial name="_StatisticIformationPartialView" model="Model.SurveyStatistics" />*@

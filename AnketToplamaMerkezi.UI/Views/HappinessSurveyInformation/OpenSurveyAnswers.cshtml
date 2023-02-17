@@ -1,0 +1,44 @@
+﻿@using AnketToplamaMerkezi.EntityLayer.Concrete;
+@using AnketToplamaMerkezi.EntityLayer.Concrete.Enum;
+@using AnketToplamaMerkezi.EntityLayer.Concrete.Model;
+@model HappinessSurveyAnswersModel
+@{
+    ViewData["Title"] = "OpenSurveyAnswers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>@Model.SurveyName</h1>
+
+<h1>@Model.SurveyName</h1>
+
+<form asp-controller="SavedSurveyInformation" asp-action="Index" method="get">
+    <!-- Input and Submit elements -->
+    <input readonly name="Id" type="hidden" value=@Model.Id><br />
+    <input readonly name="SurveyId" type="hidden" value=@Model.SurveyId><br /><br />
+    <h5>Ankete Katılan Kişi</h5>
+    <label readonly asp-for="PersonName">Adı :</label>
+    <input readonly type="text" asp-for="PersonName" /> <br />
+    <label readonly asp-for="PersonSurname">Soyadı :</label>
+    <input readonly type="text" asp-for="PersonSurname" /> <br />
+    <label readonly asp-for="PersonGender">Cinsiyeti :</label>
+    <select readonly asp-for="PersonGender"
+            asp-items="Html.GetEnumSelectList<Gender>()">
+    </select> <br />
+    <label readonly asp-for="PersonBirhDate">Doğum Tarihi :</label>
+    <input type="date" readonly asp-for="PersonBirhDate" /> <br />
+    <label readonly asp-for="Description">Açıklaması :</label>
+    <input type="text" readonly asp-for="Description" multiple /> <br />
+    <label readonly asp-for="HappynessRate">Mutluluk Oranı:</label>
+    <input type="number" readonly asp-for="HappynessRate" placeholder="1 ile 10 arasında bir değer giriniz" /> <br />
+    <label readonly asp-for="HappiestThing">Sizi En Mutlu Eden Şeyler :</label>
+    <input type="text" readonly asp-for="HappiestThing" /> <br />
+    <label readonly asp-for="DisappointingThing">Sizi En Mutsuz Eden Şeyler :</label>
+    <input type="text" readonly asp-for="DisappointingThing" /> <br />
+    <h5>Anketörün :</h5>
+    <label readonly asp-for="PollsterName">Adı:</label>
+    <input asp-for="PollsterName" readonly type="text" value=@Model.PollsterName><br />
+    <label readonly asp-for="PollsterSurname">Soyadı:</label>
+    <input asp-for="PollsterSurname" readonly type="text" value=@Model.PollsterSurname><br />
+    <button type="submit">Tamam</button>
+</form>
+

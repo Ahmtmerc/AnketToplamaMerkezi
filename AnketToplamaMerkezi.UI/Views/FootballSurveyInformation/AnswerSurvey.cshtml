@@ -1,0 +1,57 @@
+﻿@using AnketToplamaMerkezi.EntityLayer.Concrete;
+@using AnketToplamaMerkezi.EntityLayer.Concrete.Enum;
+@using AnketToplamaMerkezi.EntityLayer.Concrete.Model
+@model FootballSurveyAnswersModel
+@{
+    ViewData["Title"] = "AnswerSurvey";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>@Model.SurveyName</h1>
+
+<form asp-controller="FootballSurveyInformation" asp-action="AnswerSurvey" method="post">
+    <!-- Input and Submit elements -->
+    <input name="Id" type="hidden" value=@Model.Id><br />
+    <input name="SurveyId" type="hidden" value=@Model.SurveyId><br /><br />
+    <h5>Ankete Katılan Kişi</h5>
+    <ol>
+        <div>
+        <li>
+            <div><label asp-for="PersonName">Adı :</label>   </div>
+            <div><input type="text" asp-for="PersonName" /> <br /></div>
+        </li>
+        </div>
+        
+        <li>
+            <label asp-for="PersonSurname">Soyadı :</label>
+            <input type="text" asp-for="PersonSurname" /> <br />
+        </li>
+        <li>
+            <label asp-for="PersonGender">Cinsiyeti :</label>
+            <select asp-for="PersonGender"
+            asp-items="Html.GetEnumSelectList<Gender>()">
+            </select> <br />
+        </li>
+        <li>
+            <label asp-for="PersonBirhDate">Doğum Tarihi :</label>
+            <input type="date" asp-for="PersonBirhDate" /> <br />
+        </li>
+        <li>
+            <label asp-for="Description">Açıklaması :</label>
+            <input type="text" asp-for="Description" /> <br />
+        </li>
+        <li>
+            <label asp-for="FavoriteTeam">Tuttuğunuz Takım:</label>
+            <select asp-for="FavoriteTeam"
+            asp-items="Html.GetEnumSelectList<Teams>()">
+            </select><br />
+        </li>
+    </ol>
+
+    <h5>Anketörün :</h5>
+    <label asp-for="PollsterName">Adı:</label>
+    <input asp-for="PollsterName" readonly type="text" value=@Model.PollsterName><br />
+    <label asp-for="PollsterSurname">Soyadı:</label>
+    <input asp-for="PollsterSurname" readonly type="text" value=@Model.PollsterSurname><br />
+    <button type="submit">Cevapla</button>
+</form>

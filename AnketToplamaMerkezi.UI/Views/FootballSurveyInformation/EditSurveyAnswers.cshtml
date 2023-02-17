@@ -1,0 +1,40 @@
+﻿@using AnketToplamaMerkezi.EntityLayer.Concrete;
+@using AnketToplamaMerkezi.EntityLayer.Concrete.Enum;
+@using AnketToplamaMerkezi.EntityLayer.Concrete.Model
+@model FootballSurveyAnswersModel
+@{
+    ViewData["Title"] = "EditSurveyAnswers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>@Model.SurveyName</h1>
+
+<form asp-controller="FootballSurveyInformation" asp-action="EditSurveyAnswers" method="post">
+    <!-- Input and Submit elements -->
+    <input name="Id" type="hidden" value=@Model.Id><br />
+    <input name="SurveyId" type="hidden" value=@Model.SurveyId><br /><br />
+    <h5>Ankete Katılan Kişi</h5>
+    <label asp-for="PersonName">Adı :</label>
+    <input type="text" asp-for="PersonName" /> <br />
+    <label asp-for="PersonSurname">Soyadı :</label>
+    <input type="text" asp-for="PersonSurname" /> <br />
+    <label asp-for="PersonGender">Cinsiyeti :</label>
+    <select asp-for="PersonGender"
+            asp-items="Html.GetEnumSelectList<Gender>()">
+    </select> <br />
+    <label asp-for="PersonBirhDate">Doğum Tarihi :</label>
+    <input type="date" asp-for="PersonBirhDate" /> <br />
+    <label asp-for="Description">Açıklaması :</label>
+    <input type="text" asp-for="Description" /> <br />
+    <label asp-for="FavoriteTeam">Tuttuğunuz Takım:</label>
+    <select asp-for="FavoriteTeam"
+            asp-items="Html.GetEnumSelectList<Teams>()">
+    </select><br />
+
+    <h5>Anketörün :</h5>
+    <label asp-for="PollsterName">Adı:</label>
+    <input asp-for="PollsterName" readonly type="text" value=@Model.PollsterName><br />
+    <label asp-for="PollsterSurname">Soyadı:</label>
+    <input asp-for="PollsterSurname" readonly type="text" value=@Model.PollsterSurname><br />
+    <button type="submit">Güncelle</button>
+</form>

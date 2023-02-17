@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32825.248
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnketToplamaMerkezi.EntityLayer", "AnketToplamaMerkezi.EntityLayer\AnketToplamaMerkezi.EntityLayer.csproj", "{CA44D78C-A7EF-4ACA-A82F-6F17779F16DD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnketToplamaMerkezi.UI", "AnketToplamaMerkezi.UI\AnketToplamaMerkezi.UI.csproj", "{DBEAC7A7-01D0-4B3B-840D-0B4E3CFF3971}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnketToplamaMerkezi.BusinessLayer", "AnketToplamaMerkezi.BusinessLayer\AnketToplamaMerkezi.BusinessLayer.csproj", "{9928F9AC-345F-45A0-87FF-3562D8FD076E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnketToplamaMerkezi.DAL", "AnketToplamaMerkezi.DAL\AnketToplamaMerkezi.DAL.csproj", "{6B8B6567-DF02-4240-8057-7EEE6E959978}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnketToplamaMerkezi.Rep", "AnketToplamaMerkezi.Rep\AnketToplamaMerkezi.Rep.csproj", "{2E5D1840-9603-4D89-B322-CCA479D0CE04}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnketToplamaMerkezi.UoW", "AnketToplamaMerkezi.UoW\AnketToplamaMerkezi.UoW.csproj", "{8696C446-7971-4CEF-8D5F-8FBBB471DE8E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CA44D78C-A7EF-4ACA-A82F-6F17779F16DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA44D78C-A7EF-4ACA-A82F-6F17779F16DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA44D78C-A7EF-4ACA-A82F-6F17779F16DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA44D78C-A7EF-4ACA-A82F-6F17779F16DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBEAC7A7-01D0-4B3B-840D-0B4E3CFF3971}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBEAC7A7-01D0-4B3B-840D-0B4E3CFF3971}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBEAC7A7-01D0-4B3B-840D-0B4E3CFF3971}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBEAC7A7-01D0-4B3B-840D-0B4E3CFF3971}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9928F9AC-345F-45A0-87FF-3562D8FD076E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9928F9AC-345F-45A0-87FF-3562D8FD076E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9928F9AC-345F-45A0-87FF-3562D8FD076E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9928F9AC-345F-45A0-87FF-3562D8FD076E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B8B6567-DF02-4240-8057-7EEE6E959978}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B8B6567-DF02-4240-8057-7EEE6E959978}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B8B6567-DF02-4240-8057-7EEE6E959978}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B8B6567-DF02-4240-8057-7EEE6E959978}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E5D1840-9603-4D89-B322-CCA479D0CE04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E5D1840-9603-4D89-B322-CCA479D0CE04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E5D1840-9603-4D89-B322-CCA479D0CE04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E5D1840-9603-4D89-B322-CCA479D0CE04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8696C446-7971-4CEF-8D5F-8FBBB471DE8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8696C446-7971-4CEF-8D5F-8FBBB471DE8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8696C446-7971-4CEF-8D5F-8FBBB471DE8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8696C446-7971-4CEF-8D5F-8FBBB471DE8E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1D3D9A31-2593-4D11-B022-68EADEB4AB95}
+	EndGlobalSection
+EndGlobal
